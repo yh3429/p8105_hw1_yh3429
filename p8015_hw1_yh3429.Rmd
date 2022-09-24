@@ -1,8 +1,29 @@
 ---
 title: "Homework 1"
-Author: Yujie Huang
+author: Yujie Huang
 output: html_document
 date: "2022-09-24"
 ---
+
+
+```{r, message = FALSE, warning = FALSE}
+library (tidyverse)
+```
+
+## Problem 1
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+```{r}
+mean_flipper_length= mean(penguins$flipper_length_mm,na.rm = TRUE)  
+```
+A short description of the penguins dataset:
+This is the penguins dataset. The important variables' names include species, island, bill_length_mm, bill_depth_mm, flipper_length_mm,body_mass_g, sex, and year. 
+There are 344 rows and 8 columns in the dataset (344 observations of 8 variables). 
+The mean flipper length = 200.92
+
+
 
 
