@@ -52,3 +52,17 @@ p2_df = tibble(
 
 
 ```
+
+
+
+```{r, message = FALSE, warning = FALSE}
+
+mean_vec_numeric = mean (pull(p2_df, vec_numeric), na.rm=TRUE)
+mean_vec_logical = mean (pull(p2_df, vec_logical), na.rm=TRUE)
+mean_vec_char = mean (pull(p2_df, vec_char), na.rm=TRUE)
+mean_vec_factor = mean (pull(p2_df, vec_factor), na.rm=TRUE)
+```
+
+Based on the results, only numeric vector and logical vector can be 
+cconvert_vec_charalculated the mean value. The character vector and factor vector 
+cannot be calculated the mean value. 
