@@ -26,4 +26,15 @@ The mean flipper length = 200.92
 
 
 
+```{r, warning = FALSE}
+  ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm))+ geom_point(aes(color=species))
+
+```
+
+This is the scatterplot of flipper_length_mm (y) vs bill_length_mm (x); color points using the species variable. 
+
+
+```{r, warning = FALSE}
+ggsave("first scatterplot_colored.pdf")
+```
 
