@@ -38,3 +38,17 @@ This is the scatterplot of flipper_length_mm (y) vs bill_length_mm (x); color po
 ggsave("first scatterplot_colored.pdf")
 ```
 
+
+
+## Problem 2
+
+```{r, message = FALSE, warning = FALSE}
+p2_df = tibble(
+  vec_numeric = rnorm (10),
+  vec_logical = vec_numeric > 0,
+  vec_char = rep(c("A","B","C"), length=10),
+  vec_factor = factor(rep(c("small","medium","large"), length=10))
+)
+
+
+```
