@@ -66,3 +66,28 @@ mean_vec_factor = mean (pull(p2_df, vec_factor), na.rm=TRUE)
 Based on the results, only numeric vector and logical vector can be 
 cconvert_vec_charalculated the mean value. The character vector and factor vector 
 cannot be calculated the mean value. 
+
+
+
+
+```{r, message = FALSE, warning = FALSE}
+convert_vec_logical= as.numeric (pull(p2_df, vec_logical))
+convert_vec_char= as.numeric (pull(p2_df, vec_char))
+convert_vec_factor= as.numeric (pull(p2_df, vec_factor))
+            
+```
+
+
+The logical vector and factor vector can be converted but the character
+vector cannot be converted.
+
+Yes. It helps to explain what happens when trying to take the mean.
+For the logical vector, it is still reasonable for the values which
+converting to numeric variable, which is "1" recognized as "True" and 
+"0" recognized as "False". So, its mean can be calculated.
+For the factor vector, it is not meaningful for the values which 
+converting to numeric variable. So, its mean cannot be calculated.
+For the character vector, it even cannot be converted into numeric.
+So, its mean cannot be calculated.
+
+
