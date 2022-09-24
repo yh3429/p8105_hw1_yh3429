@@ -1,0 +1,8 @@
+---
+title: "Homework 1"
+Author: Yujie Huang
+output: html_document
+date: "2022-09-24"
+---
+
+
