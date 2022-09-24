@@ -10,21 +10,25 @@ date: "2022-09-24"
 library (tidyverse)
 ```
 
-## Problem 1
+# Problem 1
 
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
 
+## Mean of flipper length
 ```{r}
 mean_flipper_length= mean(penguins$flipper_length_mm,na.rm = TRUE)  
 ```
+
+## Description of dataset
 A short description of the penguins dataset:
 This is the penguins dataset. The important variables' names include species, island, bill_length_mm, bill_depth_mm, flipper_length_mm,body_mass_g, sex, and year. 
 There are 344 rows and 8 columns in the dataset (344 observations of 8 variables). 
 The mean flipper length = 200.92
 
 
+## Scatterplot
 
 ```{r, warning = FALSE}
   ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm))+ geom_point(aes(color=species))
@@ -40,8 +44,9 @@ ggsave("first scatterplot_colored.pdf")
 
 
 
-## Problem 2
+# Problem 2
 
+## Data frame
 ```{r, message = FALSE, warning = FALSE}
 p2_df = tibble(
   vec_numeric = rnorm (10),
@@ -54,7 +59,7 @@ p2_df = tibble(
 ```
 
 
-
+## Mean of data
 ```{r, message = FALSE, warning = FALSE}
 
 mean_vec_numeric = mean (pull(p2_df, vec_numeric), na.rm=TRUE)
@@ -68,7 +73,7 @@ cconvert_vec_charalculated the mean value. The character vector and factor vecto
 cannot be calculated the mean value. 
 
 
-
+## Convert vector type
 
 ```{r, message = FALSE, warning = FALSE}
 convert_vec_logical= as.numeric (pull(p2_df, vec_logical))
